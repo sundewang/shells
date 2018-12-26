@@ -14,6 +14,6 @@ else
         cp -r $srcDir $srcDir$i
     done
 
-    echo copy finish
+    echo copied
 fi
 
