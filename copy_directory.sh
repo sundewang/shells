@@ -9,7 +9,7 @@ else
     srcDir=$1
     total=$2
     
-    for (( i = 0; i < total; i++ ))
+    for (( i = 1; i <= total; i++ ))
     do
         cp -r $srcDir $srcDir$i
     done
