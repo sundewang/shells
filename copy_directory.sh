@@ -5,15 +5,16 @@
 if [ $# -ne 2 ]
 then
     echo Please input directory path and number of directory
-else
-    srcDir=$1
-    total=$2
-    
-    for (( i = 1; i <= total; i++ ))
-    do
-        cp -r $srcDir $srcDir$i
-    done
-
-    echo copied
+    exit 1
 fi
+
+srcDir=$1
+total=$2
+
+for (( i = 1; i <= total; i++ ))
+do
+    cp -r $srcDir $srcDir$i
+done
+
+echo copied
 

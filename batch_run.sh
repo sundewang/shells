@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# 批量运行
+# 批量运行run.sh
+# 遍历指定文件夹，然后运行其中的run.sh脚本
 
 # check parameters
 if [ $# -ne 1 ]
