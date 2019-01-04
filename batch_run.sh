@@ -15,7 +15,8 @@ do
     if [ -d $d ]
     then
         echo start $d/run.sh
-        bash $d/run.sh
+        cd $d
+        bash run.sh
     else
         echo $d is not directory
     fi
