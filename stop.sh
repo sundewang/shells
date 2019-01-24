@@ -27,6 +27,7 @@ if [ -z "$PIDS" ]; then
   echo "No java to stop"
   exit 1
 else
-  kill -9 $PIDS
+  echo ${PIDS}
+  kill -9 ${PIDS}
   echo "$jarName killed"
 fi
