@@ -18,6 +18,7 @@ base=$bin_abs_path
 
 # 检查程序是否已经运行
 PIDS=$(ps ax | grep -i $jarName | grep java | grep -v grep | awk '{print $1}')
+# 当程序不存在，PIDS未初始化，使用-n判断就会出错
 if [ ! -z $PIDS ]; then
     echo "program is running, please run stop.sh first, then start"
     exit 1
