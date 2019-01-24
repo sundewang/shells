@@ -18,12 +18,13 @@ base=$bin_abs_path
 
 # 检查程序是否已经运行
 PIDS=$(ps ax | grep -i $jarName | grep java | grep -v grep | awk '{print $1}')
-
-if [ -n $PIDS ]; then
+if [ ! -z $PIDS ]; then
     echo "program is running, please run stop.sh first, then start"
     exit 1
 fi
 
+# 切换到程序目录
+cd $base
 # run java，将标准输出写到文件，将标准错误写到标准输出中
 java -jar $jarName  1>>$base/logs/nohup.log 2>&1 &
 
