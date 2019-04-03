@@ -16,9 +16,9 @@ esac
 
 base=$bin_abs_path
 
-# 获取路径中jar文件，如果有超过两个jar文件或者返回-1，退出程序
+# 获取路径中jar文件，如果有超过两个jar文件或者返回empty，退出程序
 jarArray=($(getJarName $base))
-if [ ${#jarArray[*]} -ne 1 ] || [ ${jarArray[0]} -eq -1 ]; then
+if [ ${#jarArray[*]} -ne 1 ]; then
     echo "please check file in directory first, then start"
     exit 1;
 fi
