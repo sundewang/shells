@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # 使用说明：直接运行即可
-# 引入库文件
-. ./getJarName.sh
 
 # 获取脚本的所在绝对路径
 case "`uname`" in
@@ -15,6 +13,9 @@ case "`uname`" in
 esac
 
 base=$bin_abs_path
+
+# 引入库文件
+. $base/getJarName.sh
 
 # 获取路径中jar文件，如果有超过两个jar文件或者返回empty，退出程序
 jarArray=($(getJarName $base))
